@@ -1,4 +1,4 @@
-# 📓 Echo Journal
+# 📓 Mood Notes - Journaling App
 
 A simple Android journaling app built with Kotlin and Jetpack Compose. Allows users to write and view their journal entries. Uses Room DB for local database.
 
