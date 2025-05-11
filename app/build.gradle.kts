@@ -10,11 +10,11 @@ plugins {
 apply(plugin = "org.jetbrains.kotlin.kapt")
 
 android {
-    namespace = "com.tahia.echojournal"
+    namespace = "com.tahia.moodnotes"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.tahia.echojournal"
+        applicationId = "com.tahia.moodnotes"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -54,6 +54,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.navigation.runtime.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -77,6 +79,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     // ViewModel in Compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    //install navigation compose
+    implementation("androidx.navigation:navigation-compose:2.7.7") // or latest
 
 
 }

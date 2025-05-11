@@ -1,4 +1,4 @@
-package com.tahia.echojournal.data.local
+package com.tahia.moodnotes.data.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -8,6 +8,6 @@ data class JournalEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0, //unique id for each journal entry
     val content: String, //text of journal entry
     val mood: String = "", //user's emotion
-    val timestamp: Long = System.currentTimeMillis() //when it was written (number)
+    val timestamp: Long = System.currentTimeMillis() //automatically set to current time
 
 )

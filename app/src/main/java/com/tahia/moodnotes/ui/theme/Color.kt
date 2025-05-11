@@ -1,4 +1,4 @@
-package com.tahia.echojournal.ui.theme
+package com.tahia.moodnotes.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

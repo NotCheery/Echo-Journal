@@ -1,4 +1,4 @@
-package com.tahia.echojournal
+package com.tahia.moodnotes
 
 import org.junit.Test
 

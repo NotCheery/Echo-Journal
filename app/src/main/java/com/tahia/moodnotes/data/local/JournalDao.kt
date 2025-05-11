@@ -1,4 +1,4 @@
-package com.tahia.echojournal.data.local
+package com.tahia.moodnotes.data.local
 
 import androidx.room.Dao
 import androidx.room.Delete

@@ -1,4 +1,4 @@
-package com.tahia.echojournal
+package com.tahia.moodnotes
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
