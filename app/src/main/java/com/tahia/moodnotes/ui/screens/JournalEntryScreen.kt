@@ -21,6 +21,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.ui.text.style.TextOverflow
 
+import com.tahia.moodnotes.TextUtils
+
 @SuppressLint("SimpleDateFormat")
 @Composable
 fun JournalScreen(
@@ -28,11 +30,15 @@ fun JournalScreen(
     viewModel: JournalViewModel,
     onEntryClick: (JournalEntity) -> Unit
 ) {
-    //Collect the list of entries from the ViewModel using JetPack Compose's state system
+    //Collect the list of entries from the ViewModel using JetPack Compose state system
     val entries by viewModel.allEntries.collectAsState(initial = emptyList())
 
     //local state to store what user types into TextField
     var text by remember { mutableStateOf("") }
+
+    //word count from TextUtils
+    val wordCount = TextUtils.getWordCount(text)
+    val charCount = TextUtils.getCharacterCount(text)
 
     //Main column layout for journal entry
     Column(modifier = Modifier.padding(16.dp)) {
@@ -44,6 +50,13 @@ fun JournalScreen(
             modifier = Modifier.fillMaxWidth()
         )
 
+        Spacer(modifier = Modifier.height(8.dp))
+
+//        Word Count
+        Text(
+            text = "Words: $wordCount | Characters: $charCount",
+            style = MaterialTheme.typography.bodySmall
+        )
         Spacer(modifier = Modifier.height(8.dp))
 
         //Button for adding a journal entry
