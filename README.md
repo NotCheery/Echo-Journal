@@ -11,7 +11,7 @@ A simple Android journaling app built with Kotlin and Jetpack Compose. Allows us
 
 ## 🛠️ Tech Stack
 
-- **Kotlin**
+- **Kotlin and Java**
 - **Jetpack Compose**
 - **Room Database**
 - **Android Studio**
